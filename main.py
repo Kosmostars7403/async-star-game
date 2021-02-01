@@ -208,6 +208,7 @@ def draw(canvas):
     curses.curs_set(False)
     canvas.nodelay(True)
 
+    global coroutines
     coroutines = get_random_stars(canvas)
 
     canvas_center = get_canvas_center(canvas)
@@ -245,7 +246,6 @@ def draw(canvas):
 
 
 if __name__ == '__main__':
-    coroutines = []
     obstacles = []
     obstacles_in_last_collisions = []
     spaceship_frames = get_spaceship_frames()
